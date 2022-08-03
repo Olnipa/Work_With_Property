@@ -19,18 +19,18 @@
         public int PositionX { get; private set; }
         public int PositionY { get; private set; }
 
-        public Character(int x, int y)
+        public Character(int positionX, int positionY)
         {
-            PositionX = x;
-            PositionY = y;
+            PositionX = positionX;
+            PositionY = positionY;
         }
     }
 
     class Renderer
     {
-        public void DrawCharacter(int x, int y, char characterView = 'Я')
+        public void DrawCharacter(int positionX, int positionY, char characterView = 'Я')
         {
-            Console.SetCursorPosition(y, x);
+            Console.SetCursorPosition(positionY, positionX);
             Console.WriteLine(characterView);
         }
     }
